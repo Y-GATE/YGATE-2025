@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Judson:ital,wght@0,400;0,700;1,400&family=Lalezar&family=Nerko+One&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    font-weight: bold;
+    font-family: "Judson", serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #fdfde5;
+    color: #333;
+    overflow-x: hidden;
+}
+
+header {
+    background: black;
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    height: 60px;
+    z-index: 99;
+}
+
+header a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+    font-family: "Judson", serif;
+    font-size: 20px;
+    
+}
+
+header .hamburger {
+    display: none;
+
+}
+
+header .hamburger img {
+    width: 40px;
+}
+
+header .hamburger button {
+    background: none;
+    width: 100%;
+}
+
+header .content-header {
+    display: flex;
+    width: 100%;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+}
+
+.profile img {
+    background-color: white;
+    border-radius: 100%;
+    width: 40px;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 10px;
+}
+
+@media only screen and (max-width: 768px) {
+    header .hamburger {
+        display: block;
+    }
+
+    header .content-header {
+        display: none;
+    }
+
+    .content-header {
+        display: none;
+    }
+
+    .content-header.show {
+        display: block;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: black;
+        padding: 20px;
+    }
+
+    .content-header a {
+        display: block;
+        padding: 10px;
+        border-bottom: 1px solid white;
+    }
+}
